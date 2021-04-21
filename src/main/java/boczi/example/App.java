@@ -5,6 +5,7 @@ import boczi.example.repo.InMemorySongRepository;
 import boczi.example.reader.SongXMLFileReader;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Hello world!
@@ -17,10 +18,12 @@ public class App
         SongCSVFileReader songCSVFileReader = new SongCSVFileReader();
         SongXMLFileReader songXMLFileReader = new SongXMLFileReader();
 
-        System.out.println("hello world");
+        Set<Song> read = songCSVFileReader.read("C:\\Users\\Piortek\\Desktop\\songs.csv");
 
 
-   //     List<Song> list =  songCSVFileReader.read(args[0]);
+
+
+        //     List<Song> list =  songCSVFileReader.read(args[0]);
 //        List<Song> list2 = songXMLFileReader.read(args[1]);
 //        InMemorySongRepository inMemorySongRepository = new InMemorySongRepository();
 //        list.forEach((song) -> {inMemorySongRepository.addSong(song);});

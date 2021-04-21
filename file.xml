@@ -1,0 +1,16 @@
+<SONGS>
+    <SONG id = "111">
+        <TITLE>Empire Burlesque</TITLE>
+        <AUTHOR>Bob Dylan</AUTHOR>
+        <ALBUM>Album Something</ALBUM>
+        <CATEGORY>Alternative</CATEGORY>
+        <VOTES>10</VOTES>
+    </SONG>
+    <SONG id = "121">
+        <TITLE>Wiara</TITLE>
+        <AUTHOR>Ampotacja</AUTHOR>
+        <ALBUM>Album Ampotacja</ALBUM>
+        <CATEGORY>Punk</CATEGORY>
+        <VOTES>11</VOTES>
+    </SONG>
+</SONGS>

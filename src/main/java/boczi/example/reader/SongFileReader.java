@@ -1,7 +1,10 @@
 package boczi.example.reader;
 
 import boczi.example.Song;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 
@@ -14,7 +17,7 @@ public interface SongFileReader {
      * @param fileName
      * @return
      */
-    Set<Song> read(String fileName);
+    Set<Song> read(String fileName) throws ParserConfigurationException, IOException, SAXException;
 
 }
 
