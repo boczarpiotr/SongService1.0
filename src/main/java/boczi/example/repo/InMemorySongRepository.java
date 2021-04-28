@@ -8,11 +8,11 @@ import java.util.stream.Collectors;
 
 public class InMemorySongRepository implements SongRepository {
 
-   private HashMap<Song, Integer> mapOfSongs = new HashMap<>();
+    private HashMap<Song, Integer> mapOfSongs = new HashMap<>();
 
-   public HashMap<Song , Integer> getMap(){
-       return mapOfSongs;
-   }
+    public HashMap<Song, Integer> getMap() {
+        return mapOfSongs;
+    }
 
 
     @Override
@@ -26,21 +26,22 @@ public class InMemorySongRepository implements SongRepository {
 
     @Override
     public void addSong(Song song, int vote) {
-        if (mapOfSongs.containsKey(song)){
+        if (mapOfSongs.containsKey(song)) {
             mapOfSongs.put(song, (mapOfSongs.get(song) + vote));
+        } else {
+            mapOfSongs.put(song, vote);
         }
-        mapOfSongs.put(song, vote);
     }
 
     @Override
     public void deleteVotesBySong(Song song) {
-        mapOfSongs.put(song , 0);
+        mapOfSongs.put(song, 0);
     }
 
     @Override
     public void deleteAllVotes() {
-        for(Song song: mapOfSongs.keySet()){
-            mapOfSongs.put(song , 0);
+        for (Song song : mapOfSongs.keySet()) {
+            mapOfSongs.put(song, 0);
         }
     }
 
@@ -88,8 +89,8 @@ public class InMemorySongRepository implements SongRepository {
     public List<Song> getSongByCategory(String category) {
         List<Song> songsByCategory = new ArrayList<>();
 
-        for(Song song : mapOfSongs.keySet()){
-            if (song.getCategory().equals(category)){
+        for (Song song : mapOfSongs.keySet()) {
+            if (song.getCategory().equals(category)) {
                 songsByCategory.add(song);
             }
         }
